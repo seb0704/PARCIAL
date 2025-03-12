@@ -7,7 +7,7 @@ public class Gestor {
 
     public void agregarCabina(String nombre) {
         cabinas.add(new Cabina(nombre));
-        System.out.println("\nCabina '" + nombre + "' creada exitosamente.");
+        System.out.println("\nCABINA '" + nombre + "' /*/*/*/*/*CREADA EXITOSAMENTE.*/*/*/*/*/*");
     }
 
     public Cabina buscarCabina(String nombre) {
@@ -21,7 +21,7 @@ public class Gestor {
 
     public void mostrarConsolidado() {
         if (cabinas.isEmpty()) {
-            System.out.println("\n No hay cabinas registradas.");
+            System.out.println("\n NO HAY CABINAS REGISTRADAS.");
             return;
         }
 
@@ -35,9 +35,9 @@ public class Gestor {
             totalMinutos += cabina.getTotalMinutos();
         }
 
-        System.out.println("\n Consolidado General:");
-        System.out.println(" Total Llamadas: " + totalLlamadas);
-        System.out.println(" Total Minutos: " + totalMinutos);
-        System.out.println(" Costo Total: $" + totalCosto);
+        System.out.println("\n HISTORIALl:");
+        System.out.println(" TOTAL LLAMADAS: " + totalLlamadas);
+        System.out.println(" TOTAL MINUTOS: " + totalMinutos);
+        System.out.println(" TOTAL: $" + totalCosto);
     }
 }

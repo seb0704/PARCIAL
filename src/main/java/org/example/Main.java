@@ -15,50 +15,50 @@ public class Main {
             System.out.println("4 HISTORIAL");
             System.out.println("5 REINICIAR");
             System.out.println("6 SALIR");
-            System.out.print(" Elige una opción: ");
+            System.out.print(" Elige--->: ");
 
             int opcion = scanner.nextInt();
             scanner.nextLine();
 
             switch (opcion) {
                 case 1 : {
-                    System.out.print("\n Ingresa el nombre de la nueva cabina: ");
+                    System.out.print("\n INGRESE NOMBRE DE CABINA: ");
                     String nombre = scanner.nextLine();
                     gestor.agregarCabina(nombre);
                 }
                 case 2 : {
-                    System.out.print("\n Ingresa el nombre de la cabina: ");
+                    System.out.print("\n INGRESE NOMBRE DE CABINA: ");
                     String nombre = scanner.nextLine();
                     Cabina cabina = gestor.buscarCabina(nombre);
                     if (cabina != null) {
-                        System.out.print("Tipo de llamada (local/larga/celular): ");
+                        System.out.print("TIPO DE LLAMADA (LOCAL---LARGA----CELULAR): ");
                         String tipo = scanner.nextLine();
                         cabina.registrarLlamada(tipo);
                     } else {
-                        System.out.println(" Cabina no encontrada.");
+                        System.out.println(" CABINA NO ENCONTRADA.");
                     }
                 }
                 case 3 : {
-                    System.out.print("\n Ingresa el nombre de la cabina: ");
+                    System.out.print("\n INGRESE NOMBRE DE CABINA: ");
                     String nombre = scanner.nextLine();
                     Cabina cabina = gestor.buscarCabina(nombre);
                     if (cabina != null) cabina.mostrarDetalles();
-                    else System.out.println(" Cabina no encontrada.");
+                    else System.out.println(" CABINA NO ENCONTRADA");
                 }
                 case 4 : gestor.mostrarConsolidado();
                 case 5 : {
-                    System.out.print("\nIngresa el nombre de la cabina a reiniciar: ");
+                    System.out.print("\nINGRESE NOMBRE DE CABINA PARA REINICIAR ");
                     String nombre = scanner.nextLine();
                     Cabina cabina = gestor.buscarCabina(nombre);
                     if (cabina != null) cabina.reiniciarCabina();
-                    else System.out.println("Cabina no encontrada.");
+                    else System.out.println("CABINA NO ENCONTRADA");
                 }
                 case 6 : {
-                    System.out.println(" Saliendo...");
+                    System.out.println(" SALIENDO...");
                     scanner.close();
                     return;
                 }
-                default : System.out.println(" Opción no válida.");
+                default : System.out.println(" NO VALIDO.");
             }
         }
     }
